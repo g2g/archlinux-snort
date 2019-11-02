@@ -1,4 +1,4 @@
-# Maintainer: robertfoster
+# Maintainer: M0Rf30
 # Contributor: Lukas Fleischer <archlinux at cryptocrack dot de>
 # Contributor: Hugo Doria <hugo@archlinux.org>
 # Contributor: Kessia 'even' Pinheiro <kessiapinheiro at gmail.com>
@@ -29,8 +29,7 @@ build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./configure --prefix=/usr --sysconfdir=/etc/snort --with-libpcap-includes=/usr/include/pcap \
 		--with-daq-includes=/usr/include --with-daq-libraries=/usr/lib/daq/ \
-		--disable-static-daq \
-		CPPFLAGS="$CPPFLAGS -I/usr/include/tirpc/"
+		--disable-static-daq
 	make
 }
 
